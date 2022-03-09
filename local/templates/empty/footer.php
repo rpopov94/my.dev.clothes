@@ -55,14 +55,17 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		#<!--Уникальные JS для данной страницы-->
 
     	#<!--ОБЯЗАТЕЛЬНО ПОДКЛЮЧИТЕ ЭТИ СКРИПТЫ И СТИЛИ-->
-		
+
 		$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/main.js');
+		
+		##<!--Слайдер-->
+		$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/vendor/cookesHelp.js');
+		$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/vendor/bootstrap-switch.min.js');
+		$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/vendor/jquery.carouFredSel-packed.js');
+
+
 	?>
 
-    
-
-    
-    <script src=""></script>
 
 </body>
 </html>
