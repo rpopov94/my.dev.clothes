@@ -278,7 +278,9 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
 			</div>
 		</div>
 		<?endif;?>
-
+		<?if (ERROR_404=='Y'):?>
+			<div class="page-not-found">
+		<?else:?>
         <div class="container">
 			<?if(!$bIsMainPage):?>
 				<?$APPLICATION->IncludeComponent(
@@ -289,6 +291,7 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
 			<?endif;?>
             <h1><?$APPLICATION->ShowTitle(false);?></h1>
         </div>
+		<?endif;?>
         <div class="container">
             <hr/>
 	
