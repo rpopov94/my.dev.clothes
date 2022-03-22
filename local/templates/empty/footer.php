@@ -10,11 +10,15 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div class="sticky-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4">      
                         <address>
-                            Тел. (8442) 00-00-00; 00-00-00
-                            <a href="mailto:">sale@test.ru</a> <br>
-                            Москва, 2-я Хуторская ул., 38А<br>
+                            <?$APPLICATION->IncludeFile(
+									SITE_DIR."include/contacts.php",
+									array(),
+									array(
+										"MODE" => "html",
+									)
+								);?>
                         </address>
                     </div>
 
