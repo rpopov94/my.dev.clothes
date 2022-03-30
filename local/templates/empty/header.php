@@ -70,12 +70,15 @@ $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
 										);?>
                                     </ul>
                                 </div>
-                                <div class="col-lg-5 col-xs-12 hidden-print">
-                                    <div class="input-group-search">
-                                        <input type="text" class="form-control" placeholder="Поиск...">
-                                        <button class="btn btn-link" type="button"><i class="fa fa-search"></i></button>
-                                    </div>
-                                </div>
+                                <?$APPLICATION->IncludeComponent(
+									"bitrix:search.form",
+									"search",
+									Array(
+										"COMPONENT_TEMPLATE" => ".default",
+										"PAGE" => "#SITE_DIR#search/",
+										"USE_SUGGEST" => "N"
+									)
+								);?>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
